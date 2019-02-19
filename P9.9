@@ -1,1 +1,73 @@
+package p9.pkg9;
+
+/**
+ *
+ * @author Money
+ */
+public class P99 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        Executive person = new Executive();
+        
+        System.out.println(person.toString("Andy", 60000, "IT", "Yes"));
+        
+    }
+    
+}
+
+public class Executive extends Manager {
+    
+    String Executive;
+    
+    public String toString(String n, int s, String d, String e){
+    
+    Executive = e;
+    
+    return "Name: "+n+" Salary: "+s+" Department: "+ d+" Executive: "+e;
+    
+}
+    
+    
+    
+}
+
+public class Manager extends Employee{
+    
+    
+    String department;
+    
+    public String toString(String n, int s, String d){
+        
+    department = d;
+    
+    return "Name: "+n+" Department: "+" Salary: "+s;
+           
+        
+    }
+    
+}
+
+public class Employee {
+    
+    String name;
+    int salary;
+    
+    public String toString(String n, int d){
+        
+        name = n;
+        salary = d;
+        
+        return "Name: "+n+" Salary: "+d;
+        
+    }
+    
+    
+}
+
+
 
